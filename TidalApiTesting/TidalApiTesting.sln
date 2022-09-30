@@ -5,8 +5,6 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TidalApiTesting", "TidalApiTesting\TidalApiTesting.csproj", "{D57849B4-D7C5-4812-B9C0-3232D28D8558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidalApiConsoleApp", "TidalApiConsoleApp\TidalApiConsoleApp.csproj", "{EE3DEC9B-BCD1-4823-B6F5-F5F177CBE1EE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7D25324-C1CB-4458-9F20-AF964429F2B1}"
@@ -24,10 +22,6 @@ Global
 		{D57849B4-D7C5-4812-B9C0-3232D28D8558}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D57849B4-D7C5-4812-B9C0-3232D28D8558}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D57849B4-D7C5-4812-B9C0-3232D28D8558}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE3DEC9B-BCD1-4823-B6F5-F5F177CBE1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE3DEC9B-BCD1-4823-B6F5-F5F177CBE1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE3DEC9B-BCD1-4823-B6F5-F5F177CBE1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE3DEC9B-BCD1-4823-B6F5-F5F177CBE1EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
