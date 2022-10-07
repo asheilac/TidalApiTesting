@@ -1,8 +1,8 @@
+using System.Net;
 using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using SharedLibrary;
-using System.Net;
 
 namespace TidalApiTesting
 {
@@ -15,13 +15,9 @@ namespace TidalApiTesting
         public async Task GetStationsReturnsSuccessful()
         {
             var settings = CreateSettingsConfig();
-
             using var client = new HttpClient();
-
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", $"{settings.ApiKey}");
-
             var response = await client.GetAsync(GetStationsUri);
-
             response.Should().BeSuccessful();
         }
 
@@ -29,9 +25,7 @@ namespace TidalApiTesting
         public async Task GetStationsReturnsUnauthorised()
         {
             using var client = new HttpClient();
-
             var response = await client.GetAsync(GetStationsUri);
-
             response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
         }
 
@@ -39,13 +33,9 @@ namespace TidalApiTesting
         public async Task GetStationReturnsSuccessful()
         {
             var settings = CreateSettingsConfig();
-
             using var client = new HttpClient();
-
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", $"{settings.ApiKey}");
-
-            var response = await client.GetAsync(GetHirtaStationUri); 
-
+            var response = await client.GetAsync(GetHirtaStationUri);
             response.Should().BeSuccessful();
         }
 
@@ -53,15 +43,10 @@ namespace TidalApiTesting
         public async Task GetStationReturnsStationName()
         {
             var settings = CreateSettingsConfig();
-
             using var client = new HttpClient();
-
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", $"{settings.ApiKey}");
-
             var response = await client.GetAsync(GetHirtaStationUri);
-
             var content = await DeserializeContent(response);
-
             content.properties.Name.Should().Be("Hirta (Bagh A' Bhaile)");
         }
 
@@ -72,7 +57,7 @@ namespace TidalApiTesting
                 .AddEnvironmentVariables()
                 .Build();
 
-            Settings settings = config.GetRequiredSection("Settings").Get<Settings>();
+            var settings = config.GetRequiredSection("Settings").Get<Settings>();
             return settings;
         }
 
