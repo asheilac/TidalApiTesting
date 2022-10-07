@@ -8,8 +8,8 @@ namespace TidalApiTesting
 {
     public class Tests
     {
-        private const string getStationsUri = "https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations?";
-        private const string getHirtaStationUri = "https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/0322?";
+        private const string GetStationsUri = "https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations?";
+        private const string GetHirtaStationUri = "https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/0322?";
 
         [Test]
         public async Task GetStationsReturnsSuccessful()
@@ -20,7 +20,7 @@ namespace TidalApiTesting
 
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", $"{settings.ApiKey}");
 
-            var response = await client.GetAsync(getStationsUri);
+            var response = await client.GetAsync(GetStationsUri);
 
             response.Should().BeSuccessful();
         }
@@ -32,7 +32,7 @@ namespace TidalApiTesting
 
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "");
 
-            var response = await client.GetAsync(getStationsUri);
+            var response = await client.GetAsync(GetStationsUri);
 
             response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
         }
@@ -46,7 +46,7 @@ namespace TidalApiTesting
 
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", $"{settings.ApiKey}");
 
-            var response = await client.GetAsync(getHirtaStationUri); 
+            var response = await client.GetAsync(GetHirtaStationUri); 
 
             response.Should().BeSuccessful();
         }
@@ -60,7 +60,7 @@ namespace TidalApiTesting
 
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", $"{settings.ApiKey}");
 
-            var response = await client.GetAsync(getHirtaStationUri);
+            var response = await client.GetAsync(GetHirtaStationUri);
 
             var content = await DeserializeContent(response);
 

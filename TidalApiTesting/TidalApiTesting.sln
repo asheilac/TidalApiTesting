@@ -5,11 +5,16 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TidalApiTesting", "TidalApiTesting\TidalApiTesting.csproj", "{D57849B4-D7C5-4812-B9C0-3232D28D8558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7D25324-C1CB-4458-9F20-AF964429F2B1}"
 	ProjectSection(SolutionItems) = preProject
 		..\.gitignore = ..\.gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpTidalApiTesting", "RestSharpTidalApiTesting\RestSharpTidalApiTesting.csproj", "{D2606AF3-849C-485B-988C-6E65E4F0FE9F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE} = {312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}
 	EndProjectSection
 EndProject
 Global
@@ -26,6 +31,10 @@ Global
 		{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{312B7BC1-C4C3-47C9-ACB6-521DDD08E4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2606AF3-849C-485B-988C-6E65E4F0FE9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2606AF3-849C-485B-988C-6E65E4F0FE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2606AF3-849C-485B-988C-6E65E4F0FE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2606AF3-849C-485B-988C-6E65E4F0FE9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
