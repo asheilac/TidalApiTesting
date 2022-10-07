@@ -30,8 +30,6 @@ namespace TidalApiTesting
         {
             using var client = new HttpClient();
 
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "");
-
             var response = await client.GetAsync(GetStationsUri);
 
             response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
