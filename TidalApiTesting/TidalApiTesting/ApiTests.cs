@@ -1,10 +1,8 @@
-using System.Configuration;
-using System.Net;
-using System.Web;
 using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using SharedLibrary;
+using System.Net;
 
 namespace TidalApiTesting
 {
@@ -26,7 +24,6 @@ namespace TidalApiTesting
 
             response.Should().BeSuccessful();
         }
-
 
         [Test]
         public async Task GetStationsReturnsUnauthorised()
